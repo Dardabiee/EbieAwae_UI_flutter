@@ -1,6 +1,7 @@
 # shop_app
 
 A new Flutter project.
+![tokoku_flayerr](https://github.com/user-attachments/assets/cfc9a4fb-c673-4c14-ab47-087d9deb7e8e)
 
 ## Getting Started
 
