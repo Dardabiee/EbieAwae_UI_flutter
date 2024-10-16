@@ -1,16 +1,20 @@
-# shop_app
 
-A new Flutter project.
+# EbiaAwae - E-commerce UI App
 
-## Getting Started
+**EbiaAwae** is a modern, sleek e-commerce UI application designed to provide users with a smooth and engaging shopping experience. The app focuses on clean and intuitive design, making it easy for users to browse and shop for products.
 
-This project is a starting point for a Flutter application.
+## Features
 
-A few resources to get you started if this is your first Flutter project:
+- 🛒 **Beautiful Product Listings**: Organized, visually appealing product displays.
+- 🛍️ **Smooth User Navigation**: Simple and intuitive flow between categories and products.
+- 💳 **Shopping Cart**: Easy-to-use shopping cart interface with seamless checkout design.
+- 📱 **Responsive Design**: Optimized for mobile devices to ensure the best user experience.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Tech Stack
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- **Flutter**: Framework for building the user interface.
+- **Dart**: Programming language for app functionality.
+- **UI/UX Tools**: Designed using Figma for optimal user experience.
+
+## Mock up and Screenshots
+![EbieAwae_mockup](https://github.com/user-attachments/assets/ce7a5563-ea54-4ea1-a10a-2dc01eeaa2d2)
