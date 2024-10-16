@@ -16,7 +16,7 @@ class SplashContent extends StatelessWidget {
     return Column(
       children: [
        const Spacer(),
-        Text('Toko Ku',
+        Text('EbieAwae',
         style:  TextStyle(
           fontSize: getPropScreenWidth(36),
           color: kPrimaryColor,

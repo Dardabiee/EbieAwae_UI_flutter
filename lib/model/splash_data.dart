@@ -1,6 +1,6 @@
 List<Map<String, String>> splashData = [
     {
-      "text": "Welcome to Toko Ku, Let’s shop!",
+      "text": "Welcome to EbiAwae,\n Let’s shop and enjoy!",
       "image": "assets/images/pana3.png"
     },
     {

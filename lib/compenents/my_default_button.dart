@@ -17,7 +17,8 @@ class MyDefaultButton extends StatelessWidget {
       onPressed: press, 
     style:ElevatedButton.styleFrom(
       backgroundColor: kPrimaryColor,
-      minimumSize: Size(double.infinity, getPropScreenHeight(56)),
+      minimumSize: Size(double.infinity, getPropScreenHeight(56)
+      ),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(20)
       )

@@ -49,7 +49,7 @@ class _SignInFormState extends State<SignInForm> {
      );
   }
 
-  Row RememberAndForgot() {
+  Row  RememberAndForgot() {
     return Row(
                 children: [
                   Checkbox(
@@ -60,13 +60,13 @@ class _SignInFormState extends State<SignInForm> {
                       });
                     },
                   ),
-                  Text('Remember me'),
-                  Spacer(),
+                  const Text('Remember me'),
+                const  Spacer(),
                   GestureDetector(
                     onTap: () {
                       Navigator.pushNamed(context, ForgotPasswordScreen.routeName);
                     },
-                    child: Text('Forgot Password?',
+                    child: const Text('Forgot Password?',
                     style: TextStyle(
                       decoration: TextDecoration.underline
                     ),),
@@ -102,7 +102,7 @@ class _SignInFormState extends State<SignInForm> {
       },
       obscureText: true,
       decoration: 
-      InputDecoration(
+      const InputDecoration(
         labelText: "Password",
         hintText: "Enter Your Password",
         suffixIcon: CostumSuffixIcon(icon:'assets/icons/Lock.svg' ,),
@@ -141,7 +141,7 @@ class _SignInFormState extends State<SignInForm> {
         return null;
       },
       keyboardType: TextInputType.emailAddress,
-      decoration: InputDecoration(
+      decoration: const InputDecoration(
           labelText: "Email",
           hintText: "Enter Your Email",
           suffixIcon: CostumSuffixIcon(icon:'assets/icons/Mail.svg' ,),

@@ -46,7 +46,7 @@ class _BodyState extends State<Body> {
               SizedBox(
                 height: SizeConfig.screenHeight  * 0.06,
               ),
-              SignInForm(),
+              const SignInForm(),
               SizedBox(height: SizeConfig.screenHeight * 0.06,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -69,12 +69,12 @@ class _BodyState extends State<Body> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text("Don't have any account?"),
+                  const Text("Don't have any account?"),
                   GestureDetector(
                     onTap: (){
                       Navigator.pushNamed(context, SignUpScreen.routeName);
                     },
-                    child: Text("Sign up", style: TextStyle(
+                    child: const Text("Sign up", style: TextStyle(
                       color: Colors.blue,
                     ),),
                   ),
