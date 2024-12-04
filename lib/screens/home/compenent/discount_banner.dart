@@ -41,7 +41,6 @@ class DiscountBanner extends StatelessWidget {
                       TextSpan(
                         text: "Get Your Special Sale Up To 50%\n",
                         style: TextStyle(
-                          color: Colors.black,
                           fontWeight: FontWeight.bold,
                           fontSize: 22,
                         ),
@@ -50,7 +49,7 @@ class DiscountBanner extends StatelessWidget {
                             text: "Enjoy before it run out!",
                             style: TextStyle(
                              fontSize: 16,
-                             color: kSecondaryColor,
+                            //  color: kSecondaryColor,
                              fontWeight: FontWeight.w500
                             )
                           )

@@ -20,7 +20,6 @@ const kPrimaryGradientColor = LinearGradient(
 final headingStyle = TextStyle(
 fontSize: getPropScreenWidth(28),
 fontWeight: FontWeight.bold,
-color: Colors.black,
 height: 1.5
 );
   // Form Error

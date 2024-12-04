@@ -20,7 +20,6 @@ class Body extends StatelessWidget {
               const Text('Forgot password',
               style: TextStyle(
                 fontSize: 28,
-                color:  Colors.black,
                 fontWeight:FontWeight.bold
                ),
               ),
@@ -42,7 +41,7 @@ class Body extends StatelessWidget {
     return Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("Don't have any account?"),
+                Text("Don't have any account? "),
                 GestureDetector(
                   onTap: (){},
                   child: Text("Sign up", style: TextStyle(

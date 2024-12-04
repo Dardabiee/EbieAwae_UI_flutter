@@ -5,6 +5,8 @@ import 'package:shop_app/screens/profile/compenent/profile_picture.dart';
 import 'package:shop_app/screens/sign_in/sign_in_screen.dart';
 import 'package:shop_app/size_config.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:provider/provider.dart';
+import 'package:shop_app/state_managements/auth_provider.dart';
 
 class Body extends StatelessWidget {
   const Body({super.key});
@@ -15,6 +17,8 @@ class Body extends StatelessWidget {
       child: Column(
         children: [
           const ProfilePicture(),
+           SizedBox(height: getPropScreenWidth(20),),
+          Consumer<AuthProvider>(builder: (context, email, child)=>Text(email.savedEmail, style: TextStyle(fontSize: 18),)),
           SizedBox(height: getPropScreenWidth(20),),
           ItemButtonProfile(
           svgIcon: 'assets/icons/User Icon.svg',
@@ -40,8 +44,10 @@ class Body extends StatelessWidget {
           svgIcon: 'assets/icons/Log out.svg',
           title: "Log out", 
           press: (){
+            Provider.of<AuthProvider>(context, listen: false).setAuth(false);
             Navigator.pushNamedAndRemoveUntil(context, SignInScreen.routeName,
             (Route<dynamic> route) => false  );
+            
           },
           ),
         ],

@@ -34,7 +34,6 @@ class _BodyState extends State<Body> {
                 height: SizeConfig.screenHeight * 0.06,
                 child: Text('Welcome Back',
                 style: TextStyle(
-                  color: Colors.black,
                   fontSize: getPropScreenWidth(28),
                   fontWeight: FontWeight.bold,
                  ),

@@ -4,6 +4,8 @@ import 'package:shop_app/constant.dart';
 import 'package:shop_app/model/products.dart';
 import 'package:shop_app/size_config.dart';
 import 'package:readmore/readmore.dart';
+import 'package:shop_app/state_managements/favourite_provider.dart';
+import 'package:provider/provider.dart';
 
 class DetailDescription extends StatelessWidget {
   const DetailDescription({
@@ -22,7 +24,7 @@ class DetailDescription extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Text(product.title, style: TextStyle(
             fontSize: getPropScreenWidth(20),
-            color: Colors.black
+            // color: Colors.black
            ),
           ),
         ),
@@ -40,10 +42,19 @@ class DetailDescription extends StatelessWidget {
                 bottomLeft: Radius.circular(20)
               )
             ),
-            child: Icon(Icons.favorite, 
-            color: product.isFavourite 
-            ? Colors.red 
-            : kSecondaryColor,),
+            child: Consumer<FavouriteProvider>(
+              builder: (context, favorite, child) {
+                return InkWell(
+                  onTap: (){
+                    favorite.toggleFavouriteStatus(product.id);
+                  },
+                  child: Icon(Icons.favorite, 
+                  color: product.isFavourite 
+                  ? Colors.red 
+                  : kSecondaryColor,),
+                );
+              }
+            ),
           ),
         ),
         Padding(

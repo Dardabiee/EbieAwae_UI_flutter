@@ -5,6 +5,8 @@ import 'package:shop_app/screens/cart/compenents/body.dart';
 import 'package:shop_app/screens/cart/compenents/cart_navigation_bottom.dart';
 import 'package:shop_app/size_config.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:shop_app/state_managements/cart_provider.dart';
+import 'package:provider/provider.dart';
 
 class CartScreen extends StatelessWidget {
   const CartScreen({super.key});
@@ -28,7 +30,11 @@ class CartScreen extends StatelessWidget {
       title: Column(
         children: [
           Text('Your Cart',style: Theme.of(context).textTheme.bodyLarge,),
-          Text("${listCart.length} Items" , style: Theme.of(context).textTheme.bodySmall,)
+          Consumer<CartProvider>(
+            builder: (context, cart, child) {
+              return Text("${cart.cartItems.length} Items" , style: Theme.of(context).textTheme.bodySmall,);
+            }
+          )
         ],
       ),
       centerTitle: true,

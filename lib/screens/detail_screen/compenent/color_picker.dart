@@ -57,7 +57,7 @@ class _ColorPickerState extends State<ColorPicker> {
                   padding: const EdgeInsets.symmetric(horizontal: 10),
                   child: Text("${totalSelected}",style: TextStyle(
                     fontWeight: FontWeight.w600,
-                    color: Colors.black
+                    // color: Colors.black
                   ),),
                 ),
                 RoundedIconBtn(icon: Icons.add, showShadow: true, press: (){

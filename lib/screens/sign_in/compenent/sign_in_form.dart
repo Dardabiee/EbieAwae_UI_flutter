@@ -6,6 +6,8 @@ import 'package:shop_app/constant.dart';
 import 'package:shop_app/screens/forgot_password/forgot_password_screen.dart';
 import 'package:shop_app/screens/login_success/login_succes_screen.dart';
 import 'package:shop_app/size_config.dart';
+import 'package:provider/provider.dart';
+import 'package:shop_app/state_managements/auth_provider.dart';
 
 class SignInForm extends StatefulWidget {
   const SignInForm({super.key});
@@ -20,6 +22,7 @@ class _SignInFormState extends State<SignInForm> {
   String? password;
   bool remember = false;
   final List<String> errors = [];
+  final TextEditingController textEditingController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -40,6 +43,8 @@ class _SignInFormState extends State<SignInForm> {
                 _formKey.currentState!.save();
               }
               if(errors.isEmpty){
+                 Provider.of<AuthProvider>(context, listen: false).setAuth(true);
+                 Provider.of<AuthProvider>(context, listen: false).savedEmailUser(textEditingController.text);
                  Navigator.pushNamed(context, LoginSuccesScreen.routeName);
               }
              
@@ -113,6 +118,7 @@ class _SignInFormState extends State<SignInForm> {
 
   TextFormField emailFormField() {
     return TextFormField(
+      controller: textEditingController,
       onSaved: (newValue) => email = newValue,
       onChanged:(value) {
         if(value.isNotEmpty && errors.contains(kEmailNullError)){

@@ -5,6 +5,8 @@ import 'package:shop_app/model/products.dart';
 import 'package:shop_app/screens/detail_screen/detail_screen.dart';
 import 'package:shop_app/screens/home/compenent/section_title.dart';
 import 'package:shop_app/size_config.dart';
+import 'package:shop_app/state_managements/favourite_provider.dart';
+import 'package:provider/provider.dart';
 
 class PopularProducts extends StatelessWidget {
   const PopularProducts({
@@ -27,12 +29,16 @@ class PopularProducts extends StatelessWidget {
             height: getPropScreenWidth(220),
              child: Padding(
                padding: const EdgeInsets.symmetric(horizontal: 10),
-               child: Row(
-                 children: List.generate(demoProducts.length, (index) {
-                  final Product product = demoProducts[index];
-                  return ItemPopularProduct(product: demoProducts[index], press: () => Navigator.pushNamed(context, DetailScreen.routeName,
-                  arguments: product));
-                 }),
+               child: Consumer<FavouriteProvider>(
+                 builder: (context,products, child) {
+                   return Row(
+                     children: List.generate(products.listProducts.length, (index) {
+                      final Product product = products.listProducts[index];
+                      return ItemPopularProduct(product: demoProducts[index], press: () => Navigator.pushNamed(context, DetailScreen.routeName,
+                      arguments: product));
+                     }),
+                   );
+                 }
                ),
              ),
            ),

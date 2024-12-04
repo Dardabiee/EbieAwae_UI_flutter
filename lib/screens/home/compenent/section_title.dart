@@ -15,13 +15,14 @@ class SectionTitle extends StatelessWidget {
           title,
           style: const TextStyle(
             fontSize: 20,
-            color: Colors.black
+            fontWeight: FontWeight.w600
+            // color: Colors.black
           ),
         ),
         const Text(
           "see more",
           style: TextStyle(
-            color: Colors.black54
+            // color: Colors.black54
           ),
         ),
         

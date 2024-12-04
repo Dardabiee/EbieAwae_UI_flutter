@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:shop_app/compenents/my_default_button.dart';
 import 'package:shop_app/size_config.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:shop_app/state_managements/cart_provider.dart';
+import 'package:provider/provider.dart';
 
 class CartBottomNavigation extends StatelessWidget {
   const CartBottomNavigation({
@@ -53,29 +55,36 @@ class CartBottomNavigation extends StatelessWidget {
           ],
          ),
         SizedBox(height: getPropScreenWidth(20),),
-        Row(
-          children: [
-            const Text.rich(
-             TextSpan(
-               children: [
+        Consumer<CartProvider>(
+          builder: (context, cart, child) {
+            return Row(
+              children: [
+                Text.rich(
                  TextSpan(
-                    text: "Total:\n ",
-                 ),
-                 TextSpan(
-                     text: "\$337.15",
-                     style: TextStyle(
-                     fontSize: 16,
-                     color: Colors.black
-                 ),
+                   children: [
+                     TextSpan(
+                        text: "Total:\n ",
+                     ),
+                     TextSpan(
+                         text: "\$${cart.totalPrice}",
+                         style: TextStyle(
+                         fontSize: 16,
+                     ),
+                    ),
+                   ],
+                  ),
                 ),
-               ],
-              ),
-            ),
-            const Spacer(),
-            SizedBox(
-              width: getPropScreenWidth(150),
-                child: MyDefaultButton(text: "Check out", press: (){}))
-          ],
+                const Spacer(),
+                SizedBox(
+                  width: getPropScreenWidth(150),
+                    child: MyDefaultButton(text: "Check out", press: (){
+                      cart.clearCart();
+
+                      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("added to cart")));
+                    }))
+              ],
+            );
+          }
         )
         ],
       ),

@@ -3,6 +3,7 @@ import 'package:shop_app/model/products.dart';
 import 'package:shop_app/screens/cart/cart_screen.dart';
 import 'package:shop_app/screens/complete_profile/complete_screen_profile.dart';
 import 'package:shop_app/screens/detail_screen/detail_screen.dart';
+import 'package:shop_app/screens/favourite/favourite_screen.dart';
 import 'package:shop_app/screens/forgot_password/forgot_password_screen.dart';
 import 'package:shop_app/screens/home/home_screen.dart';
 import 'package:shop_app/screens/login_success/login_succes_screen.dart';
@@ -28,4 +29,5 @@ final Map<String, WidgetBuilder> routes = {
   },
   CartScreen.routeName: (context) => const CartScreen(),
   ProfilScreen.routeName: (context) => const ProfilScreen(),
+  FavouriteScreen.routeName: (context) => const FavouriteScreen(),
 };

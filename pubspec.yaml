@@ -48,7 +48,18 @@ dev_dependencies:
   flutter_lints: ^3.0.0
   flutter_svg: ^2.0.10+1
   readmore: ^3.0.0
-
+  provider: ^6.1.2
+  flutter_slidable:
+    git:
+      url: https://github.com/letsar/flutter_slidable.git
+      ref: master
+  shared_preferences: ^2.3.3
+  flutter_launcher_icons: ^0.14.1
+  device_preview: ^1.2.0
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/logo/ebiawae-iconApp.png"
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 

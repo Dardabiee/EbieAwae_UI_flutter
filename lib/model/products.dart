@@ -6,7 +6,7 @@ class Product {
   final List<String> images;
   final List<Color> colors;
   final double rating, price;
-  final bool isFavourite, isPopular;
+  bool isFavourite, isPopular;
 
   Product({
     required this.id,
@@ -39,7 +39,7 @@ List<Product> demoProducts = [
       Colors.white,
     ],
     title: "Wireless Controller for PS4™",
-    price: 64.99,
+    price: 94.99,
     description:"Wireless Controller for PS4™ gives you what you want in your gaming from over precision control your games to sharing …",
     rating: 4.8,
     isFavourite: true,
@@ -57,7 +57,7 @@ List<Product> demoProducts = [
       Colors.white,
     ],
     title: "Nike Sport White - Man Pant",
-    price: 50.5,
+    price: 23.5,
     description: "The Nike Sport White - Men's Pant is a stylish and functional piece of athletic wear designed for comfort and performance. Made from high-quality, breathable fabric, these pants feature a clean, crisp white color that adds a modern, sleek look. The design is typically slim-fit, offering a streamlined silhouette without sacrificing movement or flexibility",
     rating: 4.1,
     isPopular: true,
@@ -74,7 +74,7 @@ List<Product> demoProducts = [
       Colors.white,
     ],
     title: "Gloves XC Omega - Polygon",
-    price: 36.55,
+    price: 89.55,
     description: "The Gloves XC Omega - Polygon are high-performance cycling gloves designed for comfort, grip, and protection during off-road and cross-country (XC) biking. These gloves are made to enhance rider control while providing cushioning and breathability.",
     rating: 4.1,
     isFavourite: true,
@@ -92,9 +92,25 @@ List<Product> demoProducts = [
       Colors.white,
     ],
     title: "Logitech Head ",
-    price: 20.20,
+    price: 62.20,
     description: "The Logitech Headset is a versatile and well-designed audio accessory, ideal for gaming, online meetings, or multimedia use. It offers excellent sound quality, comfort, and clear communication, making it a popular choice for various activities",
     rating: 4.1,
+    isFavourite: true,
+  ),
+  Product(
+    id: 5,
+    images: [
+      "assets/images/Tatum-1-Home Team-PF.png",
+    ],
+    colors: [
+      const Color.fromARGB(255, 0, 0, 0),
+      const Color.fromARGB(255, 167, 167, 167),
+      Colors.white,
+    ],
+    title: "Tatum 1 'Home Team' PF",
+    price: 119.45,
+    description: "The Tatum 1 'Home Team' PF is one of NBA player Jayson Tatum's signature basketball shoes, released by Jordan Brand. This design features high performance optimized for players with explosive and agile playing styles. ",
+    rating: 4.2,
     isFavourite: true,
   ),
 ];
