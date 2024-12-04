@@ -18,3 +18,4 @@
 
 ## Mock up and Screenshots
 ![EbieAwae_mockup](https://github.com/user-attachments/assets/ce7a5563-ea54-4ea1-a10a-2dc01eeaa2d2)
+![ebiawae-latest-mockup](https://github.com/user-attachments/assets/2188db8d-ce0b-4496-94d0-ecdc8cae7d48)
