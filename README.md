@@ -17,5 +17,7 @@
 - **UI/UX Tools**: Designed using Figma for optimal user experience.
 
 ## Mock up and Screenshots
+![ebiawae-latestmockup](https://github.com/user-attachments/assets/27ec07a5-2aa7-491a-9591-09879eb54138)
 ![EbieAwae_mockup](https://github.com/user-attachments/assets/ce7a5563-ea54-4ea1-a10a-2dc01eeaa2d2)
 ![ebiawae-latest-mockup](https://github.com/user-attachments/assets/2188db8d-ce0b-4496-94d0-ecdc8cae7d48)
+
